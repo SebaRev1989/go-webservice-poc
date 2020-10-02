@@ -1,26 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var i int
-	i = 45
-	fmt.Println(i)
+	var firstName *string = new(string)
+	*firstName = "John"
+	fmt.Println(*firstName)
 
-	var f float32 = 3.14
-	fmt.Println(f)
+	lastName := "Doe"
+	fmt.Println(lastName)
 
-	firstName := "Arthur"
-	fmt.Println(firstName)
+	ptr := &lastName
+	fmt.Println(ptr, *ptr)
 
-	b := true
-	fmt.Println(b)
+	lastName = "Smith"
+	fmt.Println(ptr, *ptr)
 
-	c := complex(3, 4)
-	fmt.Println(c)
-
-	r, im := real(c), imag(c)
-	fmt.Println(r, im)
 }
