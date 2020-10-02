@@ -2,14 +2,16 @@ package main
 
 import "fmt"
 
+const (
+	first = iota
+	second
+)
+
+const (
+	third = iota
+	fourth
+)
+
 func main() {
-	const pi = 3.1415
-	fmt.Println(pi)
-
-	const c int = 3
-	fmt.Println(c + 3)
-
-	// some code
-
-	fmt.Println(float32(c) + 1.2)
+	fmt.Println(first, second, third, fourth)
 }
