@@ -3,17 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var firstName *string = new(string)
-	*firstName = "John"
-	fmt.Println(*firstName)
+	const pi = 3.1415
+	fmt.Println(pi)
 
-	lastName := "Doe"
-	fmt.Println(lastName)
+	const c int = 3
+	fmt.Println(c + 3)
 
-	ptr := &lastName
-	fmt.Println(ptr, *ptr)
+	// some code
 
-	lastName = "Smith"
-	fmt.Println(ptr, *ptr)
-
+	fmt.Println(float32(c) + 1.2)
 }
