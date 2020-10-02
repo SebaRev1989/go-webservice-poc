@@ -3,11 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	arr := [3]int{1, 2, 3}
-	slice := arr[:]
+	slice := []int{1, 2, 3}
+	fmt.Println(slice)
 
-	arr[1] = 42
-	slice[2] = 27
+	slice = append(slice, 4, 42, 47)
+	fmt.Println(slice)
 
-	fmt.Println(arr, slice)
+	s2 := slice[1:]
+	s3 := slice[:2]
+	s4 := slice[1:2]
+
+	fmt.Println(s2)
+	fmt.Println(s3)
+	fmt.Println(s4)
 }
